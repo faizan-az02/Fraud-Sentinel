@@ -10,10 +10,11 @@ OUTPUT_PATH = "data/processed/final_data.csv"
 
 def load_data():
     print("Loading merged data...")
-    df = pd.read_csv(INPUT_PATH)
-    if not df:
+    if not os.path.exists(INPUT_PATH):
         print("Dataset not found. Skipping training...")
         sys.exit(0)
+    df = pd.read_csv(INPUT_PATH)
+
     print("Shape:", df.shape)
     return df
 
