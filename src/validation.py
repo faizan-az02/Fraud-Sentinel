@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from sklearn.preprocessing import LabelEncoder
+import sys
 
 INPUT_PATH = "data/processed/merged_data.csv"
 OUTPUT_PATH = "data/processed/final_data.csv"
@@ -10,6 +11,9 @@ OUTPUT_PATH = "data/processed/final_data.csv"
 def load_data():
     print("Loading merged data...")
     df = pd.read_csv(INPUT_PATH)
+    if not df:
+        print("Dataset not found. Skipping training...")
+        sys.exit(0)
     print("Shape:", df.shape)
     return df
 
