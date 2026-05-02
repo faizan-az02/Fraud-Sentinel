@@ -33,12 +33,14 @@ model.fit(X, y)
 print("Generating SHAP values...")
 
 explainer = shap.Explainer(model)
-shap_values = explainer(X)
 
 # ------------
 # Summary plot
 # ------------
-shap.summary_plot(shap_values, X)
+
+X_sample = X.sample(1000)
+shap_values = explainer(X_sample)
+shap.summary_plot(shap_values, X_sample)
 
 # -------------
 # Log to MLflow
