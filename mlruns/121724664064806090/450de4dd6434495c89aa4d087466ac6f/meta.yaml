@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Github/Fraud-Sentinel/mlruns/121724664064806090/450de4dd6434495c89aa4d087466ac6f/artifacts
+end_time: 1777719883459
+entry_point_name: ''
+experiment_id: '121724664064806090'
+lifecycle_stage: active
+run_id: 450de4dd6434495c89aa4d087466ac6f
+run_name: XGBoost_ClassWeight
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777719833882
+status: 3
+tags: []
+user_id: Faizan Aziz

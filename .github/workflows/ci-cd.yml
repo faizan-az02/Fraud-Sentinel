@@ -1,15 +1,41 @@
-name: CI/CD
+name: ML Pipeline CI/CD
 
 on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  test:
+  ml_pipeline:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Say hello
-        run: echo "CI/CD is working!"
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Data Validation
+        run: |
+          python src/validation.py
+
+      - name: Train XGBoost Model
+        run: |
+          python src/train_xgb.py
+
+      - name: Train LightGBM Model
+        run: |
+          python src/train_lgbm.py
+
+      - name: Train Hybrid Model
+        run: |
+          python src/train_hybrid.py

@@ -1,0 +1,22 @@
+artifact_path: file:///D:/Github/Fraud-Sentinel/mlruns/1/models/m-3f93ba926a1b4e1fb11876f36e4e4f0e/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.0
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.10.0
+model_id: m-3f93ba926a1b4e1fb11876f36e4e4f0e
+model_size_bytes: 810273
+model_uuid: m-3f93ba926a1b4e1fb11876f36e4e4f0e
+prompts: null
+run_id: c3a041c95299408f86611ef27eb75f09
+utc_time_created: '2026-05-02 11:19:50.841068'

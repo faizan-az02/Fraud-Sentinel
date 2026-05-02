@@ -1,0 +1,7 @@
+artifact_location: file:///D:/Github/Fraud-Sentinel/mlruns/121724664064806090
+creation_time: 1777719349285
+experiment_id: '121724664064806090'
+last_update_time: 1777719349285
+lifecycle_stage: active
+name: fraud-detection
+workspace: default

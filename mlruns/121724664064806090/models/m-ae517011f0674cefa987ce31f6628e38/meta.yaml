@@ -1,0 +1,10 @@
+artifact_location: file:///D:/Github/Fraud-Sentinel/mlruns/121724664064806090/models/m-ae517011f0674cefa987ce31f6628e38/artifacts
+creation_timestamp: 1777719410555
+experiment_id: '121724664064806090'
+last_updated_timestamp: 1777719423561
+model_id: m-ae517011f0674cefa987ce31f6628e38
+model_type: null
+name: model
+source_run_id: 9ffb6c8a06ab4a24a0b3869d7140b1d9
+status: 2
+status_message: null
